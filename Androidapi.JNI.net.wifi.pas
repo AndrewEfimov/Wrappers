@@ -18,15 +18,12 @@ uses
   Androidapi.JNI.Java.Security,
   Androidapi.JNI.JavaTypes,
   Androidapi.JNI.GraphicsContentViewText,
-  Androidapi.JNI.Util,
   Androidapi.JNI.Os,
   Androidapi.JNI.net,
   Androidapi.JNI.Java.Net;
 
 type
   // ===== Forward declarations =====
-
-  JCharSequence = interface;                             // API 1  - java.lang.CharSequence
 
   {PACKAGE android.net}
   JNetworkInfo_DetailedState = interface;                // API 1  - android.net.NetworkInfo$DetailedState
@@ -65,21 +62,6 @@ type
   JHomeSp = interface;                                   // API 26 - android.net.wifi.hotspot2.pps.HomeSp
 
   // ===== Interface declarations =====
-  JCharSequenceClass = interface(IJavaClass)
-    ['{85DCA69A-F296-4BB4-8FE2-5ECE0EBE6611}']
-  end;
-
-  [JavaSignature('java/lang/CharSequence')]
-  JCharSequence = interface(IJavaInstance)
-    ['{D026566C-D7C6-43E7-AECA-030E2C23A8B8}']
-    function charAt(index: Integer): Char; cdecl;
-    function length: Integer; cdecl;
-    function subSequence(start: Integer; end_: Integer): JCharSequence; cdecl;
-    function toString: JString; cdecl;
-  end;
-
-  TJCharSequence = class(TJavaGenericImport<JCharSequenceClass, JCharSequence>)
-  end;
 
   JNetworkInfo_DetailedStateClass = interface(JEnumClass)
     ['{23C018BA-81E4-4B2E-B369-9CF46B9A5DAF}']
@@ -1013,8 +995,6 @@ implementation
 
 procedure RegisterTypes;
 begin
-  TRegTypes.RegisterType('Androidapi.JNI.net.wifi.JCharSequence', TypeInfo(Androidapi.JNI.net.wifi.JCharSequence));
-  
   TRegTypes.RegisterType('Androidapi.JNI.net.wifi.JNetworkInfo_DetailedState', TypeInfo(Androidapi.JNI.net.wifi.JNetworkInfo_DetailedState));
   TRegTypes.RegisterType('Androidapi.JNI.net.wifi.JDhcpInfo', TypeInfo(Androidapi.JNI.net.wifi.JDhcpInfo));
   
