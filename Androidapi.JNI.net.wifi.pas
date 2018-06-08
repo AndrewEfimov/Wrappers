@@ -683,7 +683,7 @@ type
   JWifiManager = interface(JObject)
     ['{7411ED93-E0EC-4DBC-979A-5B895346DA34}']
     function addNetwork(config: JWifiConfiguration): Integer; cdecl;
-	procedure addOrUpdatePasspointConfiguration(config: JPasspointConfiguration); cdecl; // API 26
+    procedure addOrUpdatePasspointConfiguration(config: JPasspointConfiguration); cdecl; // API 26
     procedure cancelWps(listener: JWifiManager_WpsCallback); cdecl; // (API 21) Deprecated API level P (28)
     function createMulticastLock(tag: JString): JWifiManager_MulticastLock; cdecl;
     function createWifiLock(lockType: Integer; tag: JString): JWifiManager_WifiLock; cdecl; overload; // API 3
@@ -694,7 +694,7 @@ type
     function getConfiguredNetworks: JList; cdecl;
     function getConnectionInfo: JWifiInfo; cdecl;
     function getDhcpInfo: JDhcpInfo; cdecl;
-	function getPasspointConfigurations: JList; cdecl; // API 26
+    function getPasspointConfigurations: JList; cdecl; // API 26
     function getScanResults: JList; cdecl;
     function getWifiState: Integer; cdecl;
     function is5GHzBandSupported: Boolean; cdecl; // API 21
@@ -709,12 +709,12 @@ type
     function reassociate: Boolean; cdecl;
     function reconnect: Boolean; cdecl;
     function removeNetwork(netId: Integer): Boolean; cdecl;
-	procedure removePasspointConfiguration(fqdn: JString); cdecl; // API 26
+    procedure removePasspointConfiguration(fqdn: JString); cdecl; // API 26
     function saveConfiguration: Boolean; cdecl; // (API 1) Deprecated API 26
     procedure setTdlsEnabled(remoteIPAddress: JInetAddress; enable: Boolean); cdecl; // API 19
     procedure setTdlsEnabledWithMacAddress(remoteMacAddress: JString; enable: Boolean); cdecl; // API 19
     function setWifiEnabled(ENABLED: Boolean): Boolean; cdecl;
-	procedure startLocalOnlyHotspot(callback: JWifiManager_LocalOnlyHotspotCallback; handler: JHandler); cdecl; // API 26
+    procedure startLocalOnlyHotspot(callback: JWifiManager_LocalOnlyHotspotCallback; handler: JHandler); cdecl; // API 26
     function startScan: Boolean; cdecl; // (API 1) Deprecated API level P (28)
     procedure startWps(config: JWpsInfo; listener: JWifiManager_WpsCallback); cdecl; // (API 21) Deprecated API level P (28)
     function updateNetwork(config: JWifiConfiguration): Integer; cdecl;
