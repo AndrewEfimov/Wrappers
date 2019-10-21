@@ -54,10 +54,10 @@ type
   JWifiManager_MulticastLock = interface;               // API 4  - android.net.wifi.WifiManager$MulticastLock
   JWifiManager_WifiLock = interface;                    // API 1  - android.net.wifi.WifiManager$WifiLock
   JWifiManager_WpsCallback = interface;                 // API 21 - Deprecated API 28 - android.net.wifi.WifiManager$WpsCallback
-  JWifiNetworkSpecifier = interface;                    // API 29  - android.net.wifi.WifiNetworkSpecifier
-  JWifiNetworkSpecifier_Builder = interface;            // API 29  - android.net.wifi.WifiNetworkSpecifier$Builder
-  JWifiNetworkSuggestion = interface;                   // API 29  - android.net.wifi.WifiNetworkSuggestion
-  JWifiNetworkSuggestion_Builder = interface;           // API 29  - android.net.wifi.WifiNetworkSuggestion$Builder
+  JWifiNetworkSpecifier = interface;                    // API 29 - android.net.wifi.WifiNetworkSpecifier
+  JWifiNetworkSpecifier_Builder = interface;            // API 29 - android.net.wifi.WifiNetworkSpecifier$Builder
+  JWifiNetworkSuggestion = interface;                   // API 29 - android.net.wifi.WifiNetworkSuggestion
+  JWifiNetworkSuggestion_Builder = interface;           // API 29 - android.net.wifi.WifiNetworkSuggestion$Builder
   JWpsInfo = interface;                                 // API 14 - Deprecated API 28  - android.net.wifi.WpsInfo
 
   { PACKAGE android.net.wifi.hotspot2.pps }
