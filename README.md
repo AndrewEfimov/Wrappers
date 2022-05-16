@@ -6,5 +6,4 @@ Test app: https://github.com/AndrewEfimov/FMX-Android-API-Examples/tree/master/W
 
 
 Androidapi.JNI.os.Vibration.pas - сontains two classes "VibrationEffect" and "Vibrator" for working with vibration. (include API 29)
-
 Test app: https://github.com/AndrewEfimov/FMX-Android-API-Examples/tree/master/Vibrator
